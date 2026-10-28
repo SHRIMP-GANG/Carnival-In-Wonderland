@@ -6,18 +6,21 @@ public class PlayerController : MonoBehaviour
     private Rigidbody rb;
     public float movementSpeed = 5f;
     private CharacterController cc;
-    
+    private Camera cam;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         cc = GetComponent<CharacterController>();
+        cam = GetComponentInChildren<Camera>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        float cameraYRotation = Camera.main.transform.eulerAngles.y;
+        transform.rotation = Quaternion.Euler(0, cameraYRotation, 0);
         Vector3 move = transform.right*Input.GetAxis("Horizontal") + transform.forward*Input.GetAxis("Vertical");
         cc.Move(move * movementSpeed * Time.deltaTime);
         

@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 16696077}
   - component: {fileID: 16696076}
   - component: {fileID: 16696079}
+  - component: {fileID: 16696080}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -206,11 +207,11 @@ Transform:
   m_GameObject: {fileID: 16696075}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.56, z: 0}
-  m_LocalScale: {x: 0.85683346, y: 0.85683346, z: 0.85683346}
+  m_LocalPosition: {x: 2.3427765, y: 2.9075692, z: 5.290361}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 861081179}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &16696079
 MonoBehaviour:
@@ -219,12 +220,39 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 16696075}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 883fcb6952521bc4288eebde481d9bcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraControllerTesting
   sens: 2
+--- !u!1773428102 &16696080
+ParentConstraint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 16696075}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Weight: 1
+  m_TranslationAtRest: {x: 2.3427765, y: 2.9075692, z: 5.290361}
+  m_RotationAtRest: {x: 0, y: 0, z: 0}
+  m_TranslationOffsets:
+  - {x: 0, y: 0.6535692, z: 0}
+  m_RotationOffsets:
+  - {x: 0, y: 0, z: 0}
+  m_AffectTranslationX: 1
+  m_AffectTranslationY: 1
+  m_AffectTranslationZ: 1
+  m_AffectRotationX: 0
+  m_AffectRotationY: 0
+  m_AffectRotationZ: 0
+  m_Active: 1
+  m_IsLocked: 1
+  m_Sources:
+  - sourceTransform: {fileID: 861081179}
+    weight: 1
 --- !u!1001 &208382115
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -542,8 +570,7 @@ Transform:
   m_LocalPosition: {x: 2.3427765, y: 2.254, z: 5.290361}
   m_LocalScale: {x: 1.1670879, y: 1.1670879, z: 1.1670879}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 16696078}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &861081180
@@ -1236,3 +1263,4 @@ SceneRoots:
   - {fileID: 1824040731}
   - {fileID: 424683197}
   - {fileID: 861081179}
+  - {fileID: 16696078}
