@@ -6,6 +6,7 @@ public class CameraControllerTesting : MonoBehaviour
     public float sens = 2f;
     private float xRotation = 0f;
     private float yRotation = 0f;
+    
 
 
     void Start()
@@ -25,9 +26,12 @@ public class CameraControllerTesting : MonoBehaviour
 
         xRotation -= mouseY;
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+        
+        yRotation += mouseX;
+        
 
-        transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
-        transform.parent.Rotate(Vector3.up * mouseX);
+        transform.localRotation = Quaternion.Euler(xRotation, yRotation, 0f);
+        //transform.parent.Rotate(Vector3.up * mouseX);
 
     }
 }
