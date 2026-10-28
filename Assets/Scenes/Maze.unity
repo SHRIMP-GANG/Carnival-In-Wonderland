@@ -207,11 +207,11 @@ Transform:
   m_GameObject: {fileID: 16696075}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.3427765, y: 2.9075692, z: 5.290361}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1141036071}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &16696079
 MonoBehaviour:
@@ -226,6 +226,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraControllerTesting
   sens: 2
+  BobIntensity: 0
+  BobIntensityX: 0
+  BobSpeed: 0
 --- !u!1773428102 &16696080
 ParentConstraint:
   m_ObjectHideFlags: 0
@@ -668,6 +671,38 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ebc111bc247dba14b9df2d5a331fbb6d, type: 3}
+--- !u!1 &1141036070
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1141036071}
+  m_Layer: 0
+  m_Name: Camera Parent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1141036071
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1141036070}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.3427765, y: 2.9075692, z: 5.290361}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 16696078}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1151845192 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3723204448993687915, guid: d24845568519fcd46afafebf1240c248, type: 3}
@@ -1263,4 +1298,4 @@ SceneRoots:
   - {fileID: 1824040731}
   - {fileID: 424683197}
   - {fileID: 861081179}
-  - {fileID: 16696078}
+  - {fileID: 1141036071}

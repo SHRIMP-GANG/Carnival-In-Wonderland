@@ -4,7 +4,7 @@ using UnityEngine.EventSystems;
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody rb;
-    public float movementSpeed = 5f;
+    public float movementSpeed = 3.5f;
     private CharacterController cc;
     private Camera cam;
     
