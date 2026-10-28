@@ -6,6 +6,7 @@ public class CameraControllerTesting : MonoBehaviour
     public float sens = 2f;
     private float xRotation = 0f;
     private float yRotation = 0f;
+    
 
 
     void Start()
