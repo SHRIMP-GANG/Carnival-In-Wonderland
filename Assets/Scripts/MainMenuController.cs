@@ -5,7 +5,7 @@ public class MainMenuController : MonoBehaviour
     
     public void GoToLevel()
     {
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("Maze");
     }
     
     public void GoToHome()
