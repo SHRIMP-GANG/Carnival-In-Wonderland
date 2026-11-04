@@ -199,7 +199,7 @@ namespace EightDirectionalSpriteSystem
                         }
 
                         // calculate sprite animation frame for view angle
-                        animFrameDirection = (int)(viewAngle / 45.0f + 0.5f);
+                        animFrameDirection = 2 * (int)(viewAngle / 90.0f + 0.5f);
                     }
 
 
