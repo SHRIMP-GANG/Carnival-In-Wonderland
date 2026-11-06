@@ -10,10 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4a0cf37e99fcb584dbdf7be0944f8cbf, type: 3}
-  m_Name: CarnivalPlaceholderAnim
+  m_Name: CarnivalPlaceholderStand
   m_EditorClassIdentifier: Assembly-CSharp::EightDirectionalSpriteSystem.ActorAnimation
   animName: New Actor Animation
-  animType: 0
-  animMode: 0
+  animType: 1
+  animMode: 1
   speed: 1
-  frameList: []
+  frameList:
+  - sprites:
+    - {fileID: -341581981, guid: b3fcde3dc21d3aa4aa4226b0a5a4acd5, type: 3}
+    - {fileID: 0}
+    - {fileID: 948949929, guid: b3fcde3dc21d3aa4aa4226b0a5a4acd5, type: 3}
+    - {fileID: 0}
+    - {fileID: 1224747899, guid: b3fcde3dc21d3aa4aa4226b0a5a4acd5, type: 3}
+    - {fileID: 0}
+    - {fileID: -654239473, guid: b3fcde3dc21d3aa4aa4226b0a5a4acd5, type: 3}
+    - {fileID: 0}
