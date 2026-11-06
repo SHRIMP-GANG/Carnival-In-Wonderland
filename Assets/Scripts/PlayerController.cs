@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody rb;
     public float movementSpeed = 3.5f;
     private CharacterController cc;
+    [SerializeField] public float stamina = 0.68f;
 
 
     private Camera cam;
