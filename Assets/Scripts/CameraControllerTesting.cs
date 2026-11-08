@@ -4,13 +4,10 @@ public class CameraControllerTesting : MonoBehaviour
 {
 
     public float sens = 2f;
-    private float xRotation = 0f;
-    private float yRotation = 0f;
-    
-    public float BobIntensity;
-    public float BobIntensityX;
-    public float BobSpeed;
-    
+    public float xRotation = 0f;
+    public float yRotation = 0f;
+
+
 
 
     void Start()
@@ -18,6 +15,7 @@ public class CameraControllerTesting : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
 
     }
 
@@ -30,9 +28,9 @@ public class CameraControllerTesting : MonoBehaviour
 
         xRotation -= mouseY;
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
-        
+
         yRotation += mouseX;
-        
+
 
         transform.localRotation = Quaternion.Euler(xRotation, yRotation, 0f);
         //transform.parent.Rotate(Vector3.up * mouseX);

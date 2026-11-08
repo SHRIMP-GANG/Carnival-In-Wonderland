@@ -5,6 +5,7 @@ public class Headbob : MonoBehaviour
 
     public Animator camAnim;
     public bool walking;
+    public string currentState;
 
     void Update()
     {
@@ -16,6 +17,8 @@ public class Headbob : MonoBehaviour
             walking = true;
             camAnim.ResetTrigger("sprint");
             camAnim.SetTrigger("walk");
+
+            currentState = "walk";
             // Debug.Log("walking");
 
             if (walking)
@@ -27,6 +30,8 @@ public class Headbob : MonoBehaviour
                     camAnim.ResetTrigger("idle");
                     camAnim.SetTrigger("sprint");
 
+                    currentState = "sprint";
+
                 }
             }
 
@@ -37,6 +42,8 @@ public class Headbob : MonoBehaviour
             camAnim.ResetTrigger("sprint");
             camAnim.ResetTrigger("walk");
             camAnim.SetTrigger("idle");
+
+            currentState = "idle";
             // Debug.Log("idling");
 
         }
