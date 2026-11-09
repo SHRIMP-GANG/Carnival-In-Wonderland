@@ -6,7 +6,8 @@ public class TriggerEnding : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
 
-        Debug.Log("is this even happening");
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
 
         SceneManager.LoadScene("Ending");
     }
