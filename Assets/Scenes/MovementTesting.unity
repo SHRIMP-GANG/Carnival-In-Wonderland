@@ -490,7 +490,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   movementSpeed: 5
-  stamina: 0.68
+  stamina: 1
+  sprinting: 0
 --- !u!54 &308686278
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1565,6 +1566,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
   camAnim: {fileID: 2063534920}
+  player: {fileID: 308686277}
   walking: 0
   currentState: 
 --- !u!1 &2143289844
