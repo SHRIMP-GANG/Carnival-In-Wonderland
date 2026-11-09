@@ -716,7 +716,7 @@ Camera:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingPath: -1
-  m_TargetTexture: {fileID: 8400000, guid: 358e76217a94c434988d066e3b0511cf, type: 2}
+  m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
@@ -1798,9 +1798,9 @@ Transform:
   - {fileID: 774954717}
   - {fileID: 655507482}
   - {fileID: 416260922}
-  - {fileID: 178861329}
+  - {fileID: 1378034032}
   - {fileID: 363036951}
-  - {fileID: 557046332}
+  - {fileID: 181320640}
   - {fileID: 461338474}
   - {fileID: 1923877648}
   - {fileID: 1341006499}
@@ -3554,10 +3554,10 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 406f4c436ecc8fd468bf80547b8a6b91, type: 3}
---- !u!4 &178861329 stripped
+--- !u!4 &181320640 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1411597526395067966, guid: 406f4c436ecc8fd468bf80547b8a6b91, type: 3}
-  m_PrefabInstance: {fileID: 178861328}
+  m_PrefabInstance: {fileID: 557046331}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &180043586
 GameObject:
@@ -32829,7 +32829,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 1224747899, guid: b3fcde3dc21d3aa4aa4226b0a5a4acd5, type: 3}
+  m_Sprite: {fileID: -654239473, guid: b3fcde3dc21d3aa4aa4226b0a5a4acd5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
