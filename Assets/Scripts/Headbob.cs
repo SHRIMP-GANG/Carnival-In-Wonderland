@@ -4,7 +4,8 @@ public class Headbob : MonoBehaviour
 {
 
     public Animator camAnim;
-    public bool walking;
+    public PlayerController player;
+    private bool walking;
     public string currentState;
 
     void Update()
@@ -23,7 +24,8 @@ public class Headbob : MonoBehaviour
 
             if (walking)
             {
-                if (Input.GetKey(KeyCode.LeftShift))
+
+                if (Input.GetKey(KeyCode.LeftShift) && player.stamina > 0.01f)
                 {
 
                     camAnim.ResetTrigger("walk");

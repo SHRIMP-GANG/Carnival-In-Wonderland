@@ -14,22 +14,6 @@ public class UI : MonoBehaviour
     public Headbob headbob;
     public PlayerController playerController;
 
-    private bool shrunk = false;
-
-
-    void Start()
-    {
-
-        if (shrunk == false)
-        {
-
-            staminaGreen.transform.localScale -= new Vector3(playerController.stamina, 0f, 0f);
-
-            shrunk = true;
-
-        }
-
-    }
 
 
     void Update()
@@ -38,7 +22,9 @@ public class UI : MonoBehaviour
         debugText.text = headbob.currentState;
 
         staminaVal.text = playerController.stamina.ToString("0.00");
+
+
+        staminaGreen.transform.localScale = new Vector3(playerController.stamina, 1f, 1f);
+
     }
-
-
 }
