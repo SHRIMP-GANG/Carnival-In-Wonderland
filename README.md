@@ -13,7 +13,7 @@ A short maze escape game! Play as Carnival, the titular main fisher cat of the F
 - Gwen Ocasio - Lead Designer and Artist
 - Maggie Peach - Lead Programmer
 - Seth Findly - Programmer
-- Marnixa Thomas - Programmer
+- Marnixa Thomas - Map Designer
 
 # Scope List
 Must
