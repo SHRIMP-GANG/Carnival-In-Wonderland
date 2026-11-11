@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEditor;
 using UnityEngine.EventSystems;
 
 public class PlayerController : MonoBehaviour
@@ -8,6 +9,14 @@ public class PlayerController : MonoBehaviour
     private CharacterController cc;
     [SerializeField] public float stamina = 1f;
     public bool sprinting;
+
+    public enum PlayerState
+    {
+        IDLE, WALK, SPRINT
+    };
+
+    private PlayerState currentState = PlayerState.IDLE;
+    public string currentStateStr;
 
 
     private Camera cam;
@@ -25,10 +34,10 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
 
-        if (sprinting == true)
+        if (currentState == PlayerState.SPRINT)
         {
 
-            movementSpeed = 5.5f;
+            movementSpeed = 8.0f;
         }
         else
         {
@@ -36,7 +45,7 @@ public class PlayerController : MonoBehaviour
             if (stamina < 1.0f)
             {
 
-                stamina += Time.deltaTime / 36f;
+                stamina += Time.deltaTime / 24f;
             }
 
         }
@@ -46,10 +55,19 @@ public class PlayerController : MonoBehaviour
         transform.rotation = Quaternion.Euler(0, cameraYRotation, 0);
         cc.Move(move * movementSpeed * Time.deltaTime);
 
-        if ((Input.GetKey(KeyCode.LeftShift) && stamina > 0.01f) && (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D)))
+
+
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
+        {
+            currentState = PlayerState.WALK;
+        }
+
+        if ((Input.GetKey(KeyCode.LeftShift) && stamina > 0.01f) && currentState == PlayerState.WALK)
         {
 
-            sprinting = true;
+            // sprinting = true;
+
+            currentState = PlayerState.SPRINT;
 
             stamina -= Time.deltaTime / 6f;
 
@@ -57,9 +75,11 @@ public class PlayerController : MonoBehaviour
         else
         {
 
-            sprinting = false;
+            currentState = PlayerState.IDLE;
 
         }
+
+        currentStateStr = currentState.ToString();
 
         //MoveDirection = orientation
 
