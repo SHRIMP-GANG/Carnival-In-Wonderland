@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     private CharacterController cc;
     [SerializeField] public float stamina = 1f;
     public bool sprinting;
+    private bool staminaPause;
 
     public enum PlayerState
     {
@@ -46,6 +47,12 @@ public class PlayerController : MonoBehaviour
             {
 
                 stamina += Time.deltaTime / 24f;
+
+                if (stamina > 0.2f)
+                {
+
+                    staminaPause = false;
+                }
             }
 
         }
@@ -62,7 +69,7 @@ public class PlayerController : MonoBehaviour
             currentState = PlayerState.WALK;
         }
 
-        if ((Input.GetKey(KeyCode.LeftShift) && stamina > 0.01f) && currentState == PlayerState.WALK)
+        if (((Input.GetKey(KeyCode.LeftShift) && stamina > 0.01f) && currentState == PlayerState.WALK) && staminaPause == false)
         {
 
             // sprinting = true;
@@ -70,6 +77,12 @@ public class PlayerController : MonoBehaviour
             currentState = PlayerState.SPRINT;
 
             stamina -= Time.deltaTime / 6f;
+
+            if (stamina <= 0.01f)
+            {
+
+                staminaPause = true;
+            }
 
         }
         else
