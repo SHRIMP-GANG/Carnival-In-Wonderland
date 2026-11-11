@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEditor;
 using System.Collections;
+using UnityEngine.AI;
 
 namespace EightDirectionalSpriteSystem
 {
@@ -18,7 +19,7 @@ namespace EightDirectionalSpriteSystem
         private Transform myTransform;
         private ActorAnimation currentAnimation = null;
         private State currentState = State.NONE;
-        private Rigidbody rb;
+        private NavMeshAgent agent;
 
         void Awake()
         {
@@ -28,7 +29,7 @@ namespace EightDirectionalSpriteSystem
         void Start()
         {
             SetCurrentState(State.IDLE);
-            rb = GetComponent<Rigidbody>();
+            agent = GetComponent<NavMeshAgent>();
         }
 
         private void OnEnable()
@@ -49,11 +50,11 @@ namespace EightDirectionalSpriteSystem
                 actorBillboard.SetActorForwardVector(myTransform.forward);
             }
             
-            State nextState = currentState;
+            /*State nextState = currentState;
 
-            if (rb.linearVelocity.magnitude > 0.1f)
+            if (agent.velocity.magnitude > 0.1f)
             {
-                nextState = State.WALKING;
+                nextState = State.IDLE;
             }
             else
             {
@@ -61,7 +62,7 @@ namespace EightDirectionalSpriteSystem
             }
             
 
-            SetCurrentState(nextState);
+            SetCurrentState(State.IDLE);*/
             
            
         }
