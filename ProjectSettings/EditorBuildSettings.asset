@@ -8,10 +8,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Maze.unity
     guid: 9af91141f2fea1d47ba3b29b48f2103a
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 0
     path: Assets/Scenes/Level1.unity
     guid: 5c326c830599e794aaf01ae71afcc6c6
+  - enabled: 1
+    path: Assets/Scenes/MovementTesting.unity
+    guid: 64733bca7c456a0859c00e7b5ffa80e1
+  - enabled: 1
+    path: Assets/Scenes/DeathScreen.unity
+    guid: 86666be258b64cd4fa34ddd2e373fbf3
+  - enabled: 1
+    path: Assets/Scenes/Ending.unity
+    guid: ec297addaef23dd4d93f3121e3c97196
   m_configObjects: {}
