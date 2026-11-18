@@ -849,7 +849,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Headbob
   camAnim: {fileID: 16696082}
-  player: {fileID: 861081180}
+  player: {fileID: 0}
   currentStateStr: 
   currentState: 0
 --- !u!95 &16696082
@@ -6303,13 +6303,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10d09a385d6cdfbee806bbe96302398e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UI
-  hbText: {fileID: 927793400}
-  staminaVal: {fileID: 575119064}
-  staminaRed: {fileID: 1664871828}
-  staminaGreen: {fileID: 1527841114}
-  playerText: {fileID: 309390830}
-  headbob: {fileID: 16696081}
-  playerController: {fileID: 861081180}
+  hbText: {fileID: 0}
+  staminaVal: {fileID: 0}
+  staminaRed: {fileID: 0}
+  staminaGreen: {fileID: 0}
+  playerText: {fileID: 0}
+  headbob: {fileID: 0}
+  playerController: {fileID: 0}
 --- !u!114 &325737203
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25556,6 +25556,7 @@ GameObject:
   - component: {fileID: 1522020815}
   - component: {fileID: 1522020814}
   - component: {fileID: 1522020817}
+  - component: {fileID: 1522020818}
   m_Layer: 0
   m_Name: Carnival
   m_TagString: Untagged
@@ -25606,7 +25607,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd0d6fefb7b5bf488e27c3817ecc563, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  player: {fileID: 861081174}
+  target: {fileID: 1706972410}
 --- !u!136 &1522020815
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -25664,6 +25665,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04d4cf3d171ed6188bad43b5e03038d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TriggerDeath
+--- !u!54 &1522020818
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1522020809}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &1526403543
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27913,6 +27941,37 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ebc111bc247dba14b9df2d5a331fbb6d, type: 3}
+--- !u!1 &1706972410
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1706972411}
+  m_Layer: 0
+  m_Name: CarnivalTarget
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1706972411
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1706972410}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 11.71969, y: 0.5, z: -148.07837}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1707654478 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3105729417089155002, guid: ebc111bc247dba14b9df2d5a331fbb6d, type: 3}
@@ -34172,6 +34231,7 @@ Transform:
   m_GameObject: {fileID: 2133069875}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.9987759, z: -0, w: 0.049465027}
+  m_LocalRotation: {x: -0, y: 0.99999523, z: -0, w: 0.0030955868}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -34677,3 +34737,4 @@ SceneRoots:
   - {fileID: 1708122896}
   - {fileID: 2012170112}
   - {fileID: 9284458}
+
