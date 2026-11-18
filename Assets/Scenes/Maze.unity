@@ -34531,9 +34531,7 @@ Transform:
 
   m_LocalRotation: {x: -0, y: 0.9987759, z: -0, w: 0.049465027}
   m_LocalRotation: {x: -0, y: 0.99999523, z: -0, w: 0.0030955868}
-=======
   m_LocalRotation: {x: -0, y: 0.81573105, z: -0, w: 0.57843137}
->>>>>>> f3dfb7e8585ee807b2472eab580bf286444349cf
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
