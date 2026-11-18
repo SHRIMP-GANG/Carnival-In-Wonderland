@@ -11,9 +11,11 @@ public class UI : MonoBehaviour
     [SerializeField] private Image staminaRed;
     [SerializeField] private Image staminaGreen;
     [SerializeField] private TextMeshProUGUI playerText = default;
+    [SerializeField] private TextMeshProUGUI visibility = default;
 
     public Headbob headbob;
     public PlayerController playerController;
+    public CarnivalAI carnivalAI;
 
 
     void Update()
@@ -24,9 +26,13 @@ public class UI : MonoBehaviour
         playerText.text = "player - " + playerController.currentStateStr;
 
         staminaVal.text = playerController.stamina.ToString("0.00");
-
-
+        
         staminaGreen.transform.localScale = new Vector3(playerController.stamina, 1f, 1f);
+
+        if (carnivalAI.playerVisible())
+            visibility.text = "Visible";
+        else
+            visibility.text = "Not Visible";
 
     }
 }
