@@ -18,8 +18,18 @@ public class UI : MonoBehaviour
     public CarnivalAI carnivalAI;
 
 
+    void Start()
+    {
+        debugUI(false);
+        
+    }
     void Update()
     {
+        if (Input.GetKey(KeyCode.C))
+        {
+            debugUI(true);
+        }
+        
 
         hbText.text = "hb - " + headbob.currentStateStr;
 
@@ -34,5 +44,13 @@ public class UI : MonoBehaviour
         else
             visibility.text = "Not Visible";
 
+    }
+
+    private void debugUI(bool debug)
+    {
+        hbText.enabled = debug;
+        staminaVal.enabled = debug;
+        playerText.enabled = debug;
+        visibility.enabled = debug;
     }
 }
